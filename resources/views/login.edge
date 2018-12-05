@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8" />
+      <title>123</title>
+      {{ script('common/vue') }}
+      {{ script('common/ele') }}
+      {{ style('common/ele') }}
+      {{ style('page/login') }}
+</head>
+<body>
+    <div id="app">
+        <h2 class="title">模板管理系统</h2>
+        <el-form ref="form" :model="form" label-width="80px" method="POST" action="{{ route('IndexController.do_login') }}">
+            <el-form-item label="账号">
+                <el-input v-model="form.name"></el-input>
+            </el-form-item>
+            <el-form-item label="密码">
+                <el-input type="password" v-model="form.password"></el-input>
+            </el-form-item>
+            <el-form-item>
+                <el-button type="primary">登录</el-button>
+            </el-form-item>
+        </el-form>
+    </div>
+</body>
+<script type="text/javascript">
+    var app = new Vue({
+        el:'#app',
+        data:{
+            form: {
+              name: '',
+              password: '',
+            }
+        },
+        mounted(){
+
+        },
+        methods:{
+
+        }
+    })
+</script>
+</html>

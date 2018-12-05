@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>首页</title>
+  {{ style('style') }}
+</head>
+<body>
+  <section>
+    <div class="subtitle"><p>{{title}}</p></div>
+    <div class="subtitle">
+        <ul>
+            @each(item in posts)
+                <li>{{item.title}}</li>
+            @endeach
+        </ul>
+    </div>
+  </section>
+</body>
+</html>
